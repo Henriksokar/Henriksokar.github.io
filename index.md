@@ -26,10 +26,7 @@
       </div>
 
       <div class="højre_side">
-        <p class="username">@ Henrik Skaaning - ;</p>
-        <p class="user_tagline">
-          tagline
-        </p>
+       <p class="username">@ Henrik Skaaning - ;</p>
         <p class="message">
           I kan ikke vinde. Så meget er sikkert og vist. Men nogle gange giver
           det måske også mening at opgøre et katalog over
