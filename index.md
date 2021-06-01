@@ -28,8 +28,7 @@
       <div class="højre_side">
         <p class="username">@ Henrik Skaaning - ;</p>
         <p class="user_tagline">
-          Facisternes skræk, racisternes skræk og alle de falske kommunisters
-          skræk
+          tagline
         </p>
         <p class="message">
           I kan ikke vinde. Så meget er sikkert og vist. Men nogle gange giver
