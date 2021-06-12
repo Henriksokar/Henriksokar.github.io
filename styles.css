@@ -1,4 +1,30 @@
+/* =================== TABLE OF CONTENTS =================  
+
+    1. Imports
+    2. base structure
+    3. font styles
+    4. architecture
+    5. billeder
+    6. venstre side indhold
+    7. højre side indhold
+*/
+
+/* =================== IMPORTS ===========================  
+
+
+
+
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+/* =================== BASE STRUCTURE ====================  
+
+
+
+
+
+*/
 
 * {
   margin: 0;
@@ -9,91 +35,420 @@
 }
 
 body {
-  img {
-    background-image: url("Background-image.jpg");
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-  }
   background: #585c68;
   font-size: 14px;
   line-height: 22px;
-  colour: 555555;
+  margin: 10px;
+  color: #555555;
 }
 
-img {
-  width: 100px;
-  float: left;
+/* =================== FONT STYLES ======================= 
+
+
+
+
+*/
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.semi_bold {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-underline-position: below;
+}
+
+.content {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.small_content {
+  font-weight: 500;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.small_bold {
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.resumé_og_cv .title {
+  margin-bottom: 20px;
+}
+
+.p {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 10px;
+}
+
+/* =================== ARCHITECTURE ======================= 
+
+
+
+
+*/
+
+.resumé_og_cv {
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+}
+
+.resumé_og_cv .venstre_side {
+  width: 280px;
+  background: #0bb5f4;
+  margin-left: 50px;
+}
+
+.resumé_og_cv .højre_side {
+  width: 520px;
+  background: #fff;
+  padding: 20px;
+}
+
+/* =================== BILLEDER ======================= 
+
+
+
+*/
+
+.resumé_og_cv .venstre_side .resume_profile_picture {
+  width: 100%;
+  height: 280px;
+}
+
+.resumé_og_cv .venstre_side .resume_profile_picture img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* =================== VENSTRE SIDE INDHOLD =======================
+
+  1. Font
+  2. Indhold
+  3. Lister
+
+
+
+
+
+*/
+
+.resumé_og_cv .venstre_side .bold {
+  color: #fff;
+}
+
+.resumé_og_cv .venstre_side .regular {
+  color: #b1eaff;
+  font-size: 14;
+}
+
+.resumé_og_cv .venstre_side .resume_content {
+  padding: 0 25px;
+}
+
+.resumé_og_cv .venstre_side .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #b1eaff;
+}
+
+.resumé_og_cv .venstre_side .resume_item:last-child {
+  border-bottom: 2px;
+}
+
+.resumé_og_cv .venstre_side .resume_item ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.resumé_og_cv .venstre_side .resume_item ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.resumé_og_cv .venstre_side .resume_item ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #0bb5f4;
+  border-radius: 50%;
   margin-right: 15px;
-  border-color: black;
-  border-style: solid;
-  border-width: 2px;
+  font-size: 16px;
+  position: relative;
 }
 
-.message_title {
+.resumé_og_cv .venstre_side .icon i,
+.resumé_og_cv .højre_side .resume_fritidsinteresser ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resumé_og_cv .venstre_side .resume_item ul li .data {
+  color: #b1eaff;
+}
+
+.resumé_og_cv .venstre_side .resume_skills ul li {
+  color: #b1eaff;
+}
+
+.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_name {
+  width: 25%;
+  top: -15px;
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.resumé_og_cv
+  .venstre_side
+  .resume_skills
+  .kodning
+  ul
+  li
+  .skill_name_sagsbehandling {
+  width: 25%;
+  top: -20px;
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_progress {
+  width: 60%;
+  margin: 0, 5px;
+  height: 5px;
+  background: #009fd9;
+  position: relative;
+}
+
+.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_per {
+  width: 15%;
+  margin-left: 5px;
+}
+
+.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+  border-radius: 15%;
+}
+
+.resumé_og_cv .venstre_side .resume_social {
+  color: #b1eaff;
+}
+
+.resumé_og_cv .venstre_side .resume_social a.link {
+  color: #b1eaff;
+}
+
+.resumé_og_cv .venstre_side .resume_skills .kodning_sublists_box {
+  display: inline-block;
+  width: 100%;
+  margin-left: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.resumé_og_cv .venstre_side .resume_skills .kodning_sublists_box ul {
+  margin-right: 10px;
+}
+
+.resumé_og_cv .venstre_side .resume_skills .kodning_sublists_box ul li {
   font-size: 10px;
-  margin-top: 10px;
-  margin-bottom: 2px;
-  margin-right: 20px;
+  justify-content: space-between;
+  margin-right: 10px;
+  border: 1px solid #b1eaff;
+  padding: 2px;
+  border-radius: 2%;
 }
 
-.username {
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  margin-left: 87px;
-  margin-right: 20px;
+.resumé_og_cv
+  .venstre_side
+  .resume_skills
+  .kodning_sublists_box
+  ul
+  li
+  .skill_element {
+  width: 25%;
+  margin-right: 10px;
+  position: relative;
 }
 
-.user_tagline {
-  font-weight: lighter;
-  font-size: 5px;
-  font-style: italic;
-  margin-top: -4px;
-  margin-bottom: 2px;
-  margin-left: 106px;
-  margin-right: 20px;
+.resumé_og_cv
+  .venstre_side
+  .resume_skills
+  .kodning_sublist_box
+  ul
+  li
+  .skill_element_per {
+  width: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.message {
-  font-weight: lighter;
-  font-size: 10px;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 2px;
-  margin-left: 106px;
-  margin-right: 20px;
+.resumé_og_cv
+  .venstre_side
+  .resume_skills
+  .kodning_sublists_box
+  ul
+  li
+  .skill_element_progress {
+  width: 50%;
+  margin-left: 5px;
+  height: 5px;
+  background: #009fd9;
+  position: relative;
 }
 
-.emnefelt {
-  font-weight: lighter;
-  font-size: 10px;
-  margin-top: 5px;
-  margin-bottom: 2px;
-  margin-left: 106px;
-  margin-right: 20px;
+.resumé_og_cv
+  .venstre_side
+  .resume_skills
+  .kodning_sublists_box
+  ul
+  li
+  .skill_element_progress
+  span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+  margin-left: -1px;
+  border-radius: 15%;
 }
 
-.introduktion {
-  font-weight: lighter;
-  font-size: 10px;
-  margin-top: 5px;
-  margin-bottom: 2px;
-  margin-left: 106px;
-  margin-right: 20px;
+.resumé_og_cv .venstre_side .resume_skills .kodning {
+  display: inline-block;
+  width: 100%;
 }
 
-em {
-  color: royalblue;
-  font-style: normal;
+.resumé_og_cv .venstre_side .resume_skills .kodning .ul .li {
+  justify-content: space-between;
 }
 
-.kontaktoplysninger {
-  font-weight: lighter;
-  font-size: 10px;
-  margin-top: 5px;
-  margin-bottom: 2px;
-  margin-left: 106px;
-  margin-right: 20px;
+/* =================== HØJRE SIDE INDHOLD =======================
+
+  1. Font
+  2. Indhold
+
+*/
+
+.resumé_og_cv .højre_side .bold {
+  color: #0bb5f4;
+}
+
+.resumé_og_cv .højre_side .resume_erhvervserfaring ul,
+.resumé_og_cv .højre_side .resume_uddannelse ul,
+.resumé_og_cv .højre_side .resume_organisationsarbejde ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.resumé_og_cv .højre_side ul li {
+  position: relative;
+}
+
+.resumé_og_cv .højre_side ul li .date {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.resumé_og_cv .højre_side ul li .info {
+  margin-bottom: 0px;
+}
+
+.resumé_og_cv .højre_side .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #b1eaff;
+}
+
+.resumé_og_cv .højre_side .resume_item:last-child {
+  border-bottom: 0px;
+}
+
+.resumé_og_cv .højre_side ul li:last-child .info {
+  margin-bottom: 0px;
+}
+
+.resumé_og_cv .højre_side .resume_erhvervserfaring ul li,
+.resumé_og_cv .højre_side .resume_uddannelse ul li,
+.resumé_og_cv .højre_side .resume_organisationsarbejde ul li {
+  min-height: 110px;
+}
+
+.resumé_og_cv .højre_side .resume_erhvervserfaring ul li:before,
+.resumé_og_cv .højre_side .resume_uddannelse ul li:before,
+.resumé_og_cv .højre_side .resume_organisationsarbejde ul li:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -26px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 2px solid #0bb5f4;
+}
+
+.resumé_og_cv .højre_side .resume_erhvervserfaring ul li:after,
+.resumé_og_cv .højre_side .resume_uddannelse ul li:after,
+.resumé_og_cv .højre_side .resume_organisationsarbejde ul li:after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -22px;
+  width: 3px;
+  min-height: 90px;
+  max-height: 124px;
+  background: #0bb5f4;
+}
+
+.resumé_og_cv .højre_side .resume_fritidsinteresser ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resumé_og_cv .højre_side .resume_fritidsinteresser ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #0bb5f4;
+  border-radius: 50%;
+  position: relative;
+  color: #0bb5f4;
+}
+
+.resumé_og_cv .højre_side .resume_fritidsinteresser ul li i {
+  font-size: 30px;
+}
+
+.resumé_og_cv .højre_side .resume_fritidsinteresser ul li:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -43px;
+  width: 43px;
+  height: 2px;
+  background: #0bb5f4;
+}
+
+.resumé_og_cv .højre_side .resume_fritidsinteresser ul li:last-child:before {
+  display: none;
 }
