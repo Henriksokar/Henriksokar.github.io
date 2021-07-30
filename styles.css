@@ -202,7 +202,7 @@ body {
   color: #b1eaff;
 }
 
-.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_name {
+.skill_name {
   width: 25%;
   top: -15px;
   margin-right: 10px;
@@ -230,7 +230,7 @@ body {
   flex-wrap: wrap;
 }
 
-.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_progress {
+.skill_progress {
   width: 60%;
   margin: 0, 5px;
   height: 5px;
@@ -238,12 +238,12 @@ body {
   position: relative;
 }
 
-.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_per {
+.skill_per {
   width: 15%;
   margin-left: 5px;
 }
 
-.resumé_og_cv .venstre_side .resume_skills .kodning ul li .skill_progress span {
+.skill_progress span {
   position: absolute;
   top: 0;
   left: 0;
@@ -343,6 +343,71 @@ body {
 
 .resumé_og_cv .venstre_side .resume_skills .kodning .ul .li {
   justify-content: space-between;
+}
+
+/* Accordion button skills list */
+
+.accordion {
+  border: solid;
+  border-color: #fff;
+  border-radius: 1%;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.accordion_skill {
+  color: #fff;
+}
+
+.accordion_button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #0bb5f4;
+  transition: background 0.2s;
+}
+
+.accordion_button:hover {
+  background: #07ade9;
+}
+
+.accordion_button--active {
+  background: #0bb5f4;
+}
+
+.accordion_content {
+  overflow: hidden;
+  margin-right: 10px;
+  max-height: 0;
+  transition: max-height 0.2s;
+}
+
+.accordion_button_icon {
+  color: #fff;
+}
+
+.accordion ul {
+  display: inline-block;
+  width: 100%;
+}
+
+.accordion ul li {
+  justify-content: space-between;
+}
+/* Accordion button icon animation */
+
+.fa-angle-double-down {
+  transform: rotate(0deg);
+  transition: transform 1s linear;
+}
+
+.fa-angle-double-down.open {
+  transform: rotate(180deg);
+  transition: transform 1s linear;
 }
 
 /* =================== HØJRE SIDE INDHOLD =======================
