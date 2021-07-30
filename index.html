@@ -1,28 +1,75 @@
 <!DOCTYPE html>
+<!---
+comment: The following html document is the HTML structure of the personal web-page of Henrik Skaaning 
+and can be found @ www.Henrikskaaning.dk. The page is power by a css stylesheet and hosted on github, 
+has service with dkhostmaster. My first attempt in coding something for the world to see. Based on a 
+youtube tutorial. 
+
+Table of contents: 
+
+1. language
+2. head
+3. body
+--->
+
+<!--- comment: 1. LANGUAGE OF THE CODE--->
+
 <html lang="da">
+  <!--- comment: language of the code is "da" (i use a danish keyboard and we have the ÆØÅ), the funtional
+  languge of the code itself will be in english as far as i remember not to do it in danish. The language
+  of the content will - as this is a curriculum vitae, be in danish as this is where i am searching for a job
+  --->
+
+  <!--- comment: 2. HEAD --->
+
   <head>
     <meta charset="UTF-8" />
+
+    <!--- comment: i have no idea what the following code does. --->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--- comment: end of comment --->
+
     <meta name="keywords" content="CV, Resume, Personlig hjemmeside" />
     <meta
       name="description"
       content="En lille hjemmeside som indeholder Henrik Skaanings CV, information om uddannelse og tidligere ansættelser og projekter."
     />
     <title>Henrikskaaning.dk - resumé og CV</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!--- comment: CSS stylesheet: when in testing use href="test-styles.css" when in standard operating mode,
+      use href="styles.css" --->
+    <link rel="stylesheet" type="text/css" href="test-styles.css" />
+
+    <!--- comment: my fontawesome kit in use for this webpage --->
     <script
       src="https://kit.fontawesome.com/d0f17566dd.js"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
   </head>
+
+  <!--- comment: 3. BODY: BEGINNING OF CONTENT: THE ONE DIV TO RULE THEM ALL. --->
   <body>
     <div class="resumé_og_cv">
+      <!--- comment: This webpage consists, basically, of two sides - the left_side (venstre_side) & 
+        right side (højre_side) --->
+
       <div class="venstre_side">
+        <!--- comment: the venstre_side Has the following elements split into two elements, firstly a picture and lastly
+          some resume info, a list of skills, and some links to social profiles. 
+          
+        first the picture: --->
         <div class="resume_profile_picture">
+          <!--- comment: profile picture. taken when i worked for ATP. I think it is sources locally - maybe i should replace
+            this with a link to github, might make the page run faster --->
           <img src="14340_henrik.jpg" alt="A picture of me" />
         </div>
+
+        <!--- comment: lastly, the rest --->
         <div class="resume_content">
+          <!--- comment: container div --->
           <div class="resume_item resume_info">
+            <!--- comment: Basic info such as name, education, phone number en email-address and web-page the list-items are made with css and 
+              icons sourced through a third party. --->
             <div class="title">
               <p class="bold">Henrik Skaaning</p>
               <p class="regular">Kandidat i socialvidenskab & psykologi</p>
@@ -48,39 +95,105 @@
               </li>
             </ul>
           </div>
+
+          <!--- comment: List of skills --->
+          <!--- comment: container div --->
           <div class="resume_item resume_skills">
             <div class="title">
               <p class="bold">Skills</p>
             </div>
-            <div class="kodning">
-              <ul class="ul_kodning">
-                <li class="li_kodning">
-                  <div class="skill_name">Kodning</div>
-                  <div class="skill_progress">
-                    <span style="width: 2%"> </span>
-                  </div>
-                  <div class="skill_per">2%</div>
-                </li>
-              </ul>
+
+            <!--- comment: The following code can be manipulated in such a way the you create a "progress-bar" for skills in the 
+              following lists: There are however still problems with the code. I have failed to integrate a "sublist" beneath the  individual
+              skills, even if i have made it look as if that was not the case: --->
+
+            <!--- comment: coding that (doesent) contains a sublist: i want this to be an accordion button, that keeps the same dimensions and the
+              progress bar. i also want a small white-ish arrow pointing down (a wedge would do) to indicate that there is a button. If
+              this is sucessfull i should also have a "combined" skill-element --->
+
+            <!--- i have now created the accordion button. i will now try to make the wedge turn upside down when the accorion is cliked. --->
+
+            <!--- First Accordion Button -->
+            <div class="accordion">
+              <button type="button" class="accordion_button">
+                <div class="accordion_skill">
+                  <ul class="ul_accordion">
+                    <li class="li_accordion">
+                      <div class="skill_name">Kodning</div>
+                      <div class="skill_progress">
+                        <span style="width: 2%"> </span>
+                      </div>
+                      <div class="skill_per">2%</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="accordion_button_icon">
+                  <i
+                    id="icon"
+                    class="fas fa-angle-double-down"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </button>
+              <div class="accordion_content">
+                <div class="kodning_sublists_box">
+                  <ul class="ul_kodning_sublists">
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">Basic HTML & HTML5</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 100%"> </span>
+                      </div>
+                      <div class="skill_element_per">100%</div>
+                    </li>
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">Basic CSS</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 100%"> </span>
+                      </div>
+                      <div class="skill_element_per">100%</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="kodning_sublists_box">
-              <ul class="ul_kodning_sublists">
-                <li class="li_kodning_sublist">
-                  <div class="skill_element">Basic HTML & HTML5</div>
-                  <div class="skill_element_progress">
-                    <span style="width: 21%"> </span>
-                  </div>
-                  <div class="skill_element_per">21%</div>
-                </li>
-                <li class="li_kodning_sublist">
-                  <div class="skill_element">Basic CSS</div>
-                  <div class="skill_element_progress">
-                    <span style="width: 10%"> </span>
-                  </div>
-                  <div class="skill_element_per">10%</div>
-                </li>
-              </ul>
-            </div>
+
+            <!--- Script running the accordion button -->
+            <script>
+              document
+                .querySelectorAll(".accordion_button")
+                .forEach((button) => {
+                  button.addEventListener("click", () => {
+                    const accordionContent = button.nextElementSibling;
+
+                    button.classList.toggle("accordion_button--active");
+
+                    if (button.classList.contains("accordion_button--active")) {
+                      accordionContent.style.maxHeight =
+                        accordionContent.scrollHeight + "px";
+                    } else {
+                      accordionContent.style.maxHeight = 0;
+                    }
+                  });
+                });
+            </script>
+
+            <!--- 
+              
+              Script trying to run the animation of the "angles down" button so it turns upside down. 
+              This absolutely does not work. it however doesnt ruin the webpage.
+
+              --->
+            <script>
+              if (button.classList.contains("accordion_button--active")) {
+                icon.className = "fa-angle-double-down open";
+              } else {
+                icon.className = "fa-angle-double-down";
+              }
+            </script>
+
+            <!--- comment: coding sublist that consists of the following elements: Basic HTML & HTML5, Basic CSS --->
+
+            <!--- comment: sagsbehandling --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
@@ -92,6 +205,8 @@
                 </li>
               </ul>
             </div>
+
+            <!--- comment: Customer Service --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
@@ -103,6 +218,8 @@
                 </li>
               </ul>
             </div>
+
+            <!--- comment: Interview Methods --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
@@ -114,6 +231,8 @@
                 </li>
               </ul>
             </div>
+
+            <!--- comment: change workshops --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
@@ -125,10 +244,12 @@
                 </li>
               </ul>
             </div>
+
+            <!--- comment: statistics --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
-                  <div class="skill_name">Satistik</div>
+                  <div class="skill_name">Statistik</div>
                   <div class="skill_progress">
                     <span style="width: 50%"> </span>
                   </div>
@@ -136,6 +257,8 @@
                 </li>
               </ul>
             </div>
+
+            <!--- comment: Discourse Analysis --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
@@ -145,19 +268,23 @@
                   </div>
                   <div class="skill_per">60%</div>
                 </li>
-                <div class="kodning">
-                  <ul class="ul_kodning">
-                    <li class="li_kodning">
-                      <div class="skill_name">Frivilligorganisering</div>
-                      <div class="skill_progress">
-                        <span style="width: 99%"> </span>
-                      </div>
-                      <div class="skill_per">99%</div>
-                    </li>
-                  </ul>
-                </div>
               </ul>
             </div>
+
+            <!--- comment: Volunteer management --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Frivilligorganisering</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Youth Organinization --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
@@ -169,6 +296,8 @@
                 </li>
               </ul>
             </div>
+
+            <!--- comment: Organizational management --->
             <div class="kodning">
               <ul class="ul_kodning">
                 <li class="li_kodning">
@@ -181,6 +310,8 @@
               </ul>
             </div>
           </div>
+
+          <!--- comment: A listing of links to social media accounts --->
           <div class="resume_item resume_social">
             <div class="title">
               <p class="bold">Social</p>
@@ -226,6 +357,8 @@
           </div>
         </div>
       </div>
+
+      <!--- comment: the højre_side that contains most of the "meat" in the presentation, so to say --->
       <div class="højre_side">
         <div class="resume_item resume_om">
           <div class="title">
@@ -235,9 +368,7 @@
             www.henrikskaaning.dk er et af mine første forsøg ud af et reelt
             kodningsprojekt - her i meget simpel HTML og CSS. Siden har til
             formål at være et interaktivt CV (selvom vi ikke helt er der endnu)
-            og en måde at få fat i mig på. Da jeg netop er blevet meddelt at jeg
-            ikke bliver forlænget i mit nuværende job er jeg jobsøgende og
-            derfor tænkte jeg et sådant CV kunne gå hen at være meget behændigt
+            og en måde at få fat i mig på.
           </p>
         </div>
         <div class="resume_item resume_faglig_profil">
@@ -248,10 +379,13 @@
             Kandidat i socialvidenskab og Psykologi fra Roskilde Universitet.
             Erfaringer inden for så forskelligtartede områder som salg og
             service, telefonisk kunderådgivning og organiationsledelse i
-            politiske organisationer. Er dygtig til og interesserer mig for
-            mange forskellige ting og er rolig under pres. Jeg er en god kollega
-            og en behagelig bulldozer - og dedikeret til at levere løsninger af
-            høj kvalitet.
+            politiske organisationer. Jeg kan køre dit uddannelsesforløb,
+            programmere en simpel hjemmeside, planlægge og udføre
+            borgerindragelse. Sagsbehandle ud fra gældende lovgivning på
+            beskæftigelses, uddannelses og socialområdet. Arrangere dit event.
+            Eller hente dig en kop kaffe og tage en god snak med dig. Jeg er en
+            behagelig bulldozer som er dedikeret til at levere løsninger af høj
+            kvalitet til gavn for kolleger og borgere.
           </p>
         </div>
         <div class="resume_item resume_erhvervserfaring">
@@ -260,7 +394,33 @@
           </div>
           <ul>
             <li>
-              <div class="date">2021(5) - Present:</div>
+              <div class="date">2021(7) - Present:</div>
+              <div class="info">
+                <p class="small_bold">Københavns Kommune</p>
+                <p class="semi_bold">Vikar i hjemmeplejen</p>
+              </div>
+              <div>
+                <p class="content">
+                  Rengøringsvikar hos hjemmeplejen i Københavns Kommune.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2021(6) - 2021 (7):</div>
+              <div class="info">
+                <p class="small_bold">Styrelsen for Patientsikkerhed</p>
+                <p class="semi_bold">Operatør</p>
+              </div>
+              <div>
+                <p class="content">
+                  Operatør i coronaopsporingsenheden hos Styrelsen for
+                  Patientsikkerhed; rådgivning af borgere ifbm. covid-19
+                  pandemien.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2021(5) - 2021(6):</div>
               <div class="info">
                 <p class="small_bold">ATP</p>
                 <p class="semi_bold">Floorwalker</p>
@@ -272,15 +432,13 @@
               </div>
               <div>
                 <p class="content">
-                  Ansat som floorwalker hos ATP, i smitteopsporings-enheden hvor
-                  vi dagligt har rådgivet tusindvis af smittede og danskere i
-                  nærkontakt med smittede, om styrelsen for patientsikkerheds
+                  Ansat som floorwalker hos ATP, i smitteopsporings-enheden,
+                  hvor vi dagligt har rådgivet tusindvis af smittede og danskere
+                  i nærkontakt med smittede, om styrelsen for patientsikkerheds
                   retningslinjer ifbm. Covid-19 pandemien. Jeg har som
                   floorwalker haft ansvar for den daglige rådgivning & faglige
-                  opkvalificering af hold 17's kunderådgivere - og en sjælden
-                  gang imellem en hjælpende hånd til min teamleder. Fantastisk
-                  arbejdsplads og holdånd. Opgaven udført pva. Styrelsen for
-                  Patientsikkerhed
+                  opkvalificering af hold 17's kunderådgivere. Opgave udført
+                  pva. Styrelsen for patientsikkerhed.
                 </p>
               </div>
             </li>
@@ -290,7 +448,7 @@
                 <p class="small_bold">ATP</p>
                 <p class="semi_bold">Kunderådgiver</p>
                 <p class="small_content">
-                  Resultater: jeg klarede jobbet så godt at jeg endte med at
+                  Resultater: Jeg klarede jobbet så godt at jeg endte med at
                   blive forfremmet til floorwalker for mit hold.
                 </p>
               </div>
@@ -318,7 +476,7 @@
                 <p class="content">
                   Podning af borgere i Falcks testcenter på Frederiksberg. Havde
                   flere hundrede borgere ved min podestation - en mulighed for
-                  kundeservice med et smil bag mundbinde, foruden registrering
+                  kundeservice med et smil bag mundbindet, foruden registrering
                   og håndtering af de mange tusinde borgere vi endte med at have
                   igennem
                 </p>
@@ -410,10 +568,10 @@
                   socialvidenskaberen evnen til at tænke - også kritisk,
                   analysere og vha. eksperviden hjælpe organisationer,
                   virksomheder, offentlige organisationer i kommune, region
-                  eller med at navigere og tilpasse sig nye krav. Hvordan skal
-                  vi håndtere me2? Hvordan sikrer vi at folks datarettigheder
-                  beskyttes i en tid hvor sociale medier i nogen grad har
-                  monopol på vores persondata, hvordan tilpasser vi os
+                  eller stat med at navigere og tilpasse sig nye krav. Hvordan
+                  skal vi håndtere me2? Hvordan sikrer vi at folks
+                  datarettigheder beskyttes i en tid hvor sociale medier i nogen
+                  grad har monopol på vores persondata, hvordan tilpasser vi os
                   klimakrisen? hvordan do we handle the globalisering? Hvad skal
                   der til for at den måde vores samfund er skruet sammen på er
                   til gavn for de mennesker der bor i danmark? Hvad er
@@ -509,7 +667,7 @@
                   Universitet. Opgaver herunder kampagnearbejde, koordinering af
                   demonstrationer & aktioner med formål om at skabe opmærksomhed
                   for studerendes vilkår og afskaffelse af eks.
-                  uddannelsesloftet.
+                  uddannelsesloftet og fremdriftsreformen.
                 </p>
               </div>
             </li>
