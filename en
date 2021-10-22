@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<!---
+comment: The following html document is the HTML structure of the personal web-page of Henrik Skaaning 
+and can be found @ www.Henrikskaaning.dk. The page is power by a css stylesheet and hosted on github, 
+has service with dkhostmaster. My first attempt in coding something for the world to see. Based on a 
+youtube tutorial. 
+
+Table of contents: 
+
+1. language
+2. head
+3. body
+--->
+
+<!--- comment: 1. LANGUAGE OF THE CODE--->
+
+<html lang="da">
+  <!--- comment: language of the code is "da" (i use a danish keyboard and we have the ÆØÅ), the funtional
+  languge of the code itself will be in english as far as i remember not to do it in danish. The language
+  of the content will - as this is a curriculum vitae, be in danish as this is where i am searching for a job
+  --->
+
+  <!--- comment: 2. HEAD --->
+
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--- comment: i have no idea what the following code does. --->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--- comment: end of comment --->
+
+    <meta name="keywords" content="CV, Resume, Personlig hjemmeside" />
+    <meta
+      name="description"
+      content="En lille hjemmeside som indeholder Henrik Skaanings CV, information om uddannelse og tidligere ansættelser og projekter."
+    />
+    <title>Henrikskaaning.dk - resumé & CV</title>
+
+    <!--- comment: CSS stylesheet: when in testing use href="test-styles.css" when in standard operating mode,
+      use href="styles.css" --->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!--- comment: my fontawesome kit in use for this webpage --->
+    <script
+      src="https://kit.fontawesome.com/d0f17566dd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!--- comment: 3. BODY: BEGINNING OF CONTENT: THE ONE DIV TO RULE THEM ALL. --->
+  <body>
+    <div class="resumé_og_cv">
+      <!--- comment: This webpage consists, basically, of two sides - the left_side (venstre_side) & 
+        right side (højre_side) --->
+
+      <div class="venstre_side">
+        <!--- comment: the venstre_side Has the following elements split into two elements, firstly a picture and lastly
+          some resume info, a list of skills, and some links to social profiles. 
+          
+        first the picture: --->
+        <div class="resume_profile_picture">
+          <!--- comment: profile picture. taken when i worked for ATP. I think it is sources locally - maybe i should replace
+            this with a link to github, might make the page run faster --->
+          <img src="14340_henrik.jpg" alt="A picture of me" />
+        </div>
+
+        <!--- comment: lastly, the rest --->
+        <div class="resume_content">
+          <!--- comment: container div --->
+          <div class="resume_item resume_info">
+            <!--- comment: Basic info such as name, education, phone number en email-address and web-page the list-items are made with css and 
+              icons sourced through a third party. --->
+            <div class="title">
+              <p class="bold">Henrik Skaaning</p>
+              <p class="regular">Master og social science and psychology</p>
+            </div>
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="fas fa-mobile" aria-hidden="true"></i>
+                </div>
+                <div class="data">+45 91768924</div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="data">Smelt4@hotmail.com</div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fas fa-wifi" aria-hidden="true"></i>
+                </div>
+                <div class="data">www.henrikskaaning.dk</div>
+              </li>
+            </ul>
+          </div>
+
+          <!--- comment: List of skills --->
+          <!--- comment: container div --->
+          <div class="resume_item resume_skills">
+            <div class="title">
+              <p class="bold">Skills</p>
+            </div>
+
+            <!--- comment: The following code can be manipulated in such a way the you create a "progress-bar" for skills in the 
+              following lists: There are however still problems with the code. I have failed to integrate a "sublist" beneath the  individual
+              skills, even if i have made it look as if that was not the case: --->
+
+            <!--- comment: coding that (doesent) contains a sublist: i want this to be an accordion button, that keeps the same dimensions and the
+              progress bar. i also want a small white-ish arrow pointing down (a wedge would do) to indicate that there is a button. If
+              this is sucessfull i should also have a "combined" skill-element --->
+
+            <!--- i have now created the accordion button. i will now try to make the wedge turn upside down when the accordion is cliked. --->
+
+            <!--- First Accordion Button -->
+            <div class="accordion">
+              <button type="button" class="accordion_button">
+                <div class="accordion_skill">
+                  <ul class="ul_accordion">
+                    <li class="li_accordion">
+                      <div class="skill_name">Coding</div>
+                      <div class="skill_progress">
+                        <span style="width: 3%"> </span>
+                      </div>
+                      <div class="skill_per">3%</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="accordion_button_icon">
+                  <i
+                    id="icon"
+                    class="fas fa-angle-double-down"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </button>
+              <div class="accordion_content">
+                <div class="kodning_sublists_box">
+                  <ul class="ul_kodning_sublists">
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">Basic HTML & HTML5</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 100%"> </span>
+                      </div>
+                      <div class="skill_element_per">100%</div>
+                    </li>
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">Basic CSS</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 100%"> </span>
+                      </div>
+                      <div class="skill_element_per">100%</div>
+                    </li>
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">Beautiful Soup 4</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 4%"> </span>
+                      </div>
+                      <div class="skill_element_per">4%</div>
+                    </li>
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">Scrapy</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 3%"> </span>
+                      </div>
+                      <div class="skill_element_per">3%</div>
+                    </li>
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">Pandas</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 2%"> </span>
+                      </div>
+                      <div class="skill_element_per">2%</div>
+                    </li>
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">SQLite</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 1%"> </span>
+                      </div>
+                      <div class="skill_element_per">1%</div>
+                    </li>
+                    <li class="li_kodning_sublist">
+                      <div class="skill_element">NumPy</div>
+                      <div class="skill_element_progress">
+                        <span style="width: 1%"> </span>
+                      </div>
+                      <div class="skill_element_per">1%</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--- Script running the accordion button -->
+            <script>
+              document
+                .querySelectorAll(".accordion_button")
+                .forEach((button) => {
+                  button.addEventListener("click", () => {
+                    const accordionContent = button.nextElementSibling;
+
+                    button.classList.toggle("accordion_button--active");
+
+                    if (button.classList.contains("accordion_button--active")) {
+                      accordionContent.style.maxHeight =
+                        accordionContent.scrollHeight + "px";
+                    } else {
+                      accordionContent.style.maxHeight = 0;
+                    }
+                  });
+                });
+            </script>
+
+            <!--- 
+              
+              Script trying to run the animation of the "angles down" button so it turns upside down. 
+              This absolutely does not work. it however doesnt ruin the webpage.
+
+              --->
+            <script>
+              if (button.classList.contains("accordion_button--active")) {
+                icon.className = "fa-angle-double-down open";
+              } else {
+                icon.className = "fa-angle-double-down";
+              }
+            </script>
+
+            <!--- comment: coding sublist that consists of the following elements: Basic HTML & HTML5, Basic CSS --->
+
+            <!--- comment: sagsbehandling --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name_sagsbehandling">Processing</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Customer Service --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Custumer service / councelling</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Sales</div>
+                  <div class="skill_progress">
+                    <span style="width: 80%"> </span>
+                  </div>
+                  <div class="skill_per">80%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Interview Methods --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Interview methods</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: change workshops --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Workshops of change</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: statistics --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Statistics</div>
+                  <div class="skill_progress">
+                    <span style="width: 50%"> </span>
+                  </div>
+                  <div class="skill_per">50%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Discourse Analysis --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Discourse analysis</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Volunteer management --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Organizing Volunteers</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Youth Organinization --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Organizing Youth</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Organizational management --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">
+                    Organizational management<br /><br />
+                  </div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <!--- comment: Organizational development --->
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">
+                    Organizational development<br /><br />
+                  </div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">
+                    Digital membership-databases (user)
+                  </div>
+                  <div class="skill_progress">
+                    <span style="width: 60%"> </span>
+                  </div>
+                  <div class="skill_per">60%</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">GDPR</div>
+                  <div class="skill_progress">
+                    <span style="width: 75%"> </span>
+                  </div>
+                  <div class="skill_per">75%</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Fundraising</div>
+                  <div class="skill_progress">
+                    <span style="width: 55%"> </span>
+                  </div>
+                  <div class="skill_per">55%</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Microsoft Access</div>
+                  <div class="skill_progress">
+                    <span style="width: 60%"> </span>
+                  </div>
+                  <div class="skill_per">60%</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--- comment: Languages --->
+
+          <div class="resume_item resume_skills">
+            <div class="title">
+              <p class="bold">Languages</p>
+            </div>
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Danish</div>
+                  <div class="skill_progress">
+                    <span style="width: 100%"> </span>
+                  </div>
+                  <div class="skill_per">100%</div>
+                </li>
+              </ul>
+            </div>
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">English</div>
+                  <div class="skill_progress">
+                    <span style="width: 99%"> </span>
+                  </div>
+                  <div class="skill_per">99%</div>
+                </li>
+              </ul>
+            </div>
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">Spanish</div>
+                  <div class="skill_progress">
+                    <span style="width: 20%"> </span>
+                  </div>
+                  <div class="skill_per">20%</div>
+                </li>
+              </ul>
+            </div>
+            <div class="kodning">
+              <ul class="ul_kodning">
+                <li class="li_kodning">
+                  <div class="skill_name">German</div>
+                  <div class="skill_progress">
+                    <span style="width: 30%"> </span>
+                  </div>
+                  <div class="skill_per">30%</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--- comment: A listing of links to social media accounts --->
+          <div class="resume_item resume_social">
+            <div class="title">
+              <p class="bold">Social</p>
+            </div>
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </div>
+                <div class="data">
+                  <p class="semi_bold">Facebook:</p>
+                  <a href="https://www.fb.me/henrik.skaaning" class="link">
+                    Click here!
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                </div>
+                <div class="data">
+                  <p class="semi_bold">Instagram:</p>
+                  <a href="https://www.instagr.am/skaanings" class="link">
+                    Click here!
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </div>
+                <div class="data">
+                  <p class="semi_bold">LinkedIn:</p>
+                  <a
+                    href="https://www.linkedin.com/in/henrikskaaning/"
+                    class="link"
+                  >
+                    Click here!
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--- comment: the højre_side that contains most of the "meat" in the presentation, so to say --->
+      <div class="højre_side">
+        <div class="resume_item resume_faglig_profil">
+          <div class="language">
+            <a href="www.henrikskaaning.dk">Læs på dansk</a>
+          </div>
+          <div class="title">
+            <p class="bold">Professional profile</p>
+          </div>
+          <p class="regular">
+            Masters degree in social science and psychology from Roskilde
+            University. Experiences within fields as varied as sales and
+            service, telemarketing and organizational management and development
+            in political organizations. <br /><br />
+            I can run your traning programme, program a simple homepage, plan
+            and execute citizens involvement, process according to current
+            danish laws in fields of employment, education and social work,
+            arrange your event - or just get you a cup of coffee and have a chat
+            with you. I am a pleasant bulldozer, dedicated to delivering
+            solutions of the highest quality to the benefit of colleagues and
+            citizens.
+          </p>
+        </div>
+        <div class="resume_item resume_erhvervserfaring">
+          <div class="title">
+            <p class="bold">Work experience:</p>
+          </div>
+          <ul>
+            <li>
+              <div class="date">2021(7) - Present:</div>
+              <div class="info">
+                <p class="small_bold">Manicupality of Copenhagen</p>
+                <p class="semi_bold">Unskilled social and healthcare-worker</p>
+              </div>
+              <div>
+                <p class="content">
+                  Unskilled social and healthcare-worker in the elderly care of
+                  the municipality of Copenhagen - A job that involves taking
+                  care of elderly citizens over the age of 65.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2021(6) - 2021 (7):</div>
+              <div class="info">
+                <p class="small_bold">Department of patient safety</p>
+                <p class="semi_bold">Operator</p>
+              </div>
+              <div>
+                <p class="content">
+                  Operator in the corona tracking unit in the department of
+                  patient safety; councelling of citizens with regards to the
+                  covid-19 pandemic.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2021(5) - 2021(6):</div>
+              <div class="info">
+                <p class="small_bold">ATP</p>
+                <p class="semi_bold">Floorwalker</p>
+                <p class="small_content">
+                  Results: Made sure that my team was sharp and delivering
+                  councelling of the highest possible quality - right up to the
+                  closure of the corona tracking unit under ATP.
+                </p>
+              </div>
+              <div>
+                <p class="content">
+                  Employed as floorwalker with ATP in the corona tracking unit,
+                  where we gave councelling regarding the covid-19 guidelines
+                  from the department of patient safety to thousands of infected
+                  citizens or danes in near-contact with the infected. As
+                  floorwalker i have had responsibility for training and
+                  councelling my operators in the guidelines from the department
+                  of patient safety - as well as assissting my closest manager
+                  (analysis af task-performance, processes and reporting). Job
+                  done on behalf of the department of patient safety.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2021(2) - 2021(5):</div>
+              <div class="info">
+                <p class="small_bold">ATP</p>
+                <p class="semi_bold">Operator</p>
+                <p class="small_content">
+                  Results: I did the job so well i ended up being promoted to
+                  floorwalker of my team.
+                </p>
+              </div>
+              <div>
+                <p class="content">
+                  Operator in the corona tracking unit, team 17 in relation to
+                  the covid-19 pandemic. The job consisted in giving advice and
+                  informing about the guidelines concerning testing regimes,
+                  isolation and hygiene ect. Job done on behalf of the
+                  department of patient safety.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2020(12) - 2021(2):</div>
+              <div class="info">
+                <p class="small_bold">Falck</p>
+                <p class="semi_bold">Swabber</p>
+              </div>
+              <div>
+                <p class="content">
+                  Swabbing of citizens in the testing facilities run by falck in
+                  the municipality of Frederiksberg. I processed hundreds of
+                  citizens at my swabbing-station - a chance for customer
+                  service with a smile behind the medical mask, not to mention
+                  registration and handling of citizens.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2020(12) - 2021(1):</div>
+              <div class="info">
+                <p class="small_bold">Copenhagen Medical</p>
+                <p class="semi_bold">Steward</p>
+              </div>
+              <div>
+                <p class="content">
+                  Handling of the many thousands of citizens that were processed
+                  through the testing facilities of Copenhagen Medical in the
+                  danish national arena. Tasks: information, que-handling and
+                  other odds and ends.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2015 - 2020:</div>
+              <div class="info">
+                <p class="small_bold">Strömma Danmark</p>
+                <p class="semi_bold">Ticket seller</p>
+                <p class="small_content">Results: Employee of the year 2018</p>
+              </div>
+              <div>
+                <p class="content">
+                  Ticket sales and customer service with Strömma Denmark, the
+                  company that owns the boat-cruise in the harbour of
+                  Copenhagen. Good, professional customer service and a chance
+                  to learn the many langauges that the tourists of Copenhagen
+                  bring with them.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="resume_item resume_uddannelse">
+          <div class="title">
+            <p class="bold">Education:</p>
+          </div>
+          <ul>
+            <li>
+              <div class="date">2016 - 2019:</div>
+              <div class="info">
+                <p class="semi_bold">Roskilde University</p>
+                <p class="small_bold">
+                  Masters degree in social science and psychology.
+                </p>
+                <p class="small_content">Cand. Soc.</p>
+              </div>
+              <div>
+                <p class="small_content">
+                  Courses: Social and societal transformationprocesses,
+                  collective research methods - practical methods course, Work-
+                  and organizatonal psychology, pedagogic psychology,
+                  Tech-psychology - studies in human-techonological interaction,
+                  rights in the welfare state - national and international
+                  perspectives, discourse analysis - which and how?
+                </p>
+                <p class="small_content">
+                  Projects: Thesis: Fear and Loathing in Denmark(7). The
+                  changing perspective of the teacher(7), Individualization as a
+                  psychological result and societal given - an analysis of upper
+                  secondary school students coping with individualization(12),
+                  competition, formation and the student(10).
+                </p>
+                <p class="content">
+                  Trained to think analytically and aquire complex knowledge and
+                  information of the highest international quality, trained in
+                  participating in and leading project-work.
+                  <br />
+                  <br />
+                  My degree is placed solidly with the intersection between
+                  social science and psychology. Social science spans several
+                  different fields from economics, political science, sociology,
+                  sociology of law & and philosophy of science - using a range
+                  of tools and methods such as statistics and moddelling,
+                  interviews, participatory observation and workshops in change
+                  and futures. The solid theoretical foundations are often
+                  directed at the study of new societal "breaking-points"; with
+                  regards to family, work-life or education or in regards to
+                  generation, ethnicity, class or climate. Whatever the subject
+                  of study the goal is clear: the degree gives the social
+                  scientist the ability to think, also critically, analyse of
+                  with the use of expert knowledge help organisation, buisnesses
+                  or public administration at municipal or state level navigate
+                  and adjust to new problems and challenges. How do we handle
+                  #me2? How do we secure the datarights for people in a time
+                  where social media to some extent have a monopoly on the use
+                  of our personal data? How to we handle the climate crisis? How
+                  do we handle the globalization? How do we build societies that
+                  benefit the people of society? What is identity politics? -
+                  these are some of the questions that a master of social
+                  science and psychology can give you an educated and
+                  scientifically well-founded answer to.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2012 - 2016:</div>
+              <div class="info">
+                <p class="semi_bold">Roskilde University</p>
+                <p class="small_bold">Bachelor in the social sciences bsc.</p>
+              </div>
+              <div>
+                <p class="content">
+                  Through introduction to the theories and methods of social
+                  science - under many of the same headlines as descibed above.
+                </p>
+                <p class="small_content">
+                  Extra-curricular activities: Treasurer of SamRåd (Subject
+                  council for students in social science), member of the board
+                  of the student council of RU.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2008 - 2011:</div>
+              <div class="info">
+                <p class="semi_bold">Upper-secondary school of Viborg</p>
+                <p class="small_bold">Languages and music</p>
+              </div>
+              <div>
+                <p class="content">
+                  Language and music class of the upper-secondary school of
+                  Viborg.
+                </p>
+                <p class="small_content">
+                  Extra-curricular activities: VP of the student council,
+                  musical (as both actor and musician), member of the
+                  triumvirate of the all-male shouting-choir.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">1999 - 2008:</div>
+              <div class="info">
+                <p class="semi_bold">Puplic school of Skals</p>
+              </div>
+              <div>
+                <p class="content">
+                  Local school for the children of Skals and sorrounding area.
+                </p>
+                <p class="small_content">
+                  Extra-curricular activities: VP of the student council.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="resume_item resume_organisationsarbejde">
+          <div class="title">
+            <p class="bold">Organizational work:</p>
+          </div>
+          <ul>
+            <li>
+              <div class="date">2007 - 2020:</div>
+              <div class="info">
+                <p class="semi_bold">Socialist Youth Front - SUF</p>
+                <p class="small_bold">
+                  member, activist and member of the leadership.
+                </p>
+              </div>
+              <div>
+                <p class="content">
+                  Socialist youth organisation with approximately 500 members
+                  and a connection to the Red-Green Alliance and International
+                  Forum. Through my time in SUF i have gained insight and
+                  expertice in every task from recruiting and on-boarding,
+                  leadership, handling of digital membership systems, education,
+                  GDPR, employee contact (3 employess), and economic management
+                  (1.5 Million Dkr) and organizational development.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2012 - 2019:</div>
+              <div class="info">
+                <p class="semi_bold">Student council of RU</p>
+                <p class="small_bold">
+                  Regular active and member of the board.
+                </p>
+              </div>
+              <div>
+                <p class="content">
+                  interest organization for students at roskilde university.
+                  Tasks including: campaigning, coordination of demonstrations,
+                  activism and protests with the purpose of creating visibility
+                  for students and student living-conditions, a repealing of the
+                  education-ceiling and the reform of progression.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2013 - 2016:</div>
+              <div class="info">
+                <p class="semi_bold">SamRåd</p>
+                <p class="small_bold">
+                  Treasurer and member of the triumvirate.
+                </p>
+              </div>
+              <div>
+                <p class="content">
+                  Subject council for students in social science at Roskilde
+                  University; student environment, subject debates and
+                  organizing of students in realtion to protests.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2011 - 2012:</div>
+              <div class="info">
+                <p class="semi_bold">
+                  Union of upper-secondary school students of Denmark.
+                </p>
+                <p class="small_bold">
+                  Secretariat volunteer with special responsibility for
+                  processing student complaints
+                </p>
+              </div>
+              <div>
+                <p class="content">
+                  Volunteer in the sectretariat of the Union of upper-secondary
+                  school students of Denmark in Copenhagen. Responsibilities
+                  include; student complaints, caompaigning, education and
+                  training of students and student councils throughout the
+                  country, organizing assemblies (with up to 400 participants)
+                  and debates.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2009 - 2010:</div>
+              <div class="info">
+                <p class="semi_bold">Network of youth-councils in Denmark</p>
+                <p class="small_bold">VP</p>
+              </div>
+              <div>
+                <p class="content">
+                  VP of the NAU that represents the municipal youth-councils in
+                  conversation with the minister of culture, when not advocating
+                  for better conditions for youths and youth participation in
+                  democracy.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2008 - 2011:</div>
+              <div class="info">
+                <p class="semi_bold">
+                  Union of upper-secondary school students of Denmark.
+                </p>
+                <p class="small_bold">
+                  Ordinary active and member of the board in region skive, later
+                  VP for region Skive.
+                </p>
+              </div>
+              <div>
+                <p class="content">
+                  Volunteer in the organization for students at the
+                  upper-secondary school of Viborg, active in the local region,
+                  Skive. Work consisted of campaigning, education and
+                  organizing, protests and actions. I learned loads about the
+                  organization of youths and volunteers.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2007 - 2010:</div>
+              <div class="info">
+                <p class="semi_bold">Viborg youth council</p>
+                <p class="small_bold">Member of the board and later VP</p>
+              </div>
+              <div>
+                <p>
+                  Municipal interest representation in the area of youth - and
+                  handling of an annual pool of around 100.000 Dkr, that was
+                  used for debates, supporting local organizations, cultural
+                  activites and actions meant to bring attention to the living
+                  conditions of youths eg. a traditional annual christmas tree
+                  giveaway to bring attention to youth poverty in the chirstmas
+                  month.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="resume_item resume_fritidsinteresser">
+          <div class="title">
+            <p class="bold">Leisure:</p>
+          </div>
+          <ul>
+            <li><i class="fas fa-book" aria-hidden="true"></i></li>
+            <li><i class="fas fa-gamepad" aria-hidden="true"></i></li>
+            <li><i class="fas fa-music" aria-hidden="true"></i></li>
+            <li><i class="fas fa-tree" aria-hideen="true"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
